@@ -2,11 +2,10 @@
 
 ## 1. Identificação
 
-- **Aluno(a):** [preencher com o nome completo]
-- **Curso:** [preencher]
-- **Unidade Curricular:** [preencher]
+- **Aluna:** Luiza Vittória Cardoso
+- **Curso:** Informática
+- **Unidade Curricular:** Desenvolver Serviços Web
 
-> Substitua os campos entre colchetes pelos seus dados antes da entrega.
 
 ## 2. Descrição do projeto
 
@@ -133,7 +132,7 @@ Se o ID não existir, a API retorna **404 Not Found**:
 
 - **Método:** `POST`
 - **URL:** `/missoes`
-- **Objetivo:** criar uma missão informando seu nome.
+- **Objetivo:** Criar uma missão informando seu nome.
 - **Requisição:** `POST http://localhost:8080/missoes`
 - **Corpo JSON:**
 - **Print:** ![alt text](image5.png)
@@ -157,7 +156,7 @@ Se o ID não existir, a API retorna **404 Not Found**:
 
 - **Método:** `PUT`
 - **URL:** `/missoes/{id}`
-- **Objetivo:** alterar o nome da missão indicada pelo ID.
+- **Objetivo:** Alterar o nome da missão indicada pelo ID.
 - **Requisição:** `PUT http://localhost:8080/missoes/1`
 - **Corpo JSON:**
 - **Print:** ![alt text](imagem/image6.png)
@@ -186,7 +185,7 @@ Para um ID inexistente, retorna **404 Not Found** com `{"erro":"Missão não enc
 
 - **Método:** `DELETE`
 - **URL:** `/missoes/{id}`
-- **Objetivo:** remover a missão indicada pelo ID.
+- **Objetivo:** Remover a missão indicada pelo ID.
 - **Requisição:** `DELETE http://localhost:8080/missoes/1`
 - **Resposta — 200 OK:**
 - **Print:** ![alt text](imagem/image7.png)
@@ -197,13 +196,3 @@ Para um ID inexistente, retorna **404 Not Found** com `{"erro":"Missão não enc
 ```
 
 Para um ID inexistente, retorna **404 Not Found** com `{"erro":"Missão não encontrada"}`.
-
-## 8. Evidências dos testes
-
-**Pendente:** inserir capturas de tela dos testes feitos no Postman ou Insomnia. Salve as imagens neste repositório, por exemplo em `docs/evidencias/`, e inclua abaixo uma imagem para cada operação testada, exibindo a requisição e o código/status da resposta.
-
-Sugestões de evidências: status da API, listagem e consulta por ID, criação (`POST`), atualização (`PUT`), remoção (`DELETE`) e resposta de erro para ID inexistente. Não foram incluídas imagens nesta versão do README.
-
-## Observações sobre os dados
-
-As missões são armazenadas em um array no próprio processo, sem banco de dados ou persistência. Portanto, alterações não são persistidas entre requisições nem após reiniciar o servidor. A rota `PUT` devolve a missão com o nome alterado, mas a implementação atual não grava essa alteração no array. Esses pontos devem ser corrigidos caso seja necessário demonstrar persistência real do CRUD.
