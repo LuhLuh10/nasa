@@ -21,10 +21,8 @@ API REST para consulta e gerenciamento de missões espaciais. A API disponibiliz
 
 ## 4. Como clonar o projeto
 
-Substitua `URL_DO_REPOSITORIO` pelo endereço do repositório:
-
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/LuhLuh10/nasa.git
 cd nasa
 ```
 
@@ -59,7 +57,8 @@ Todos os exemplos abaixo usam `http://localhost:8080` como endereço-base. As re
 - **Objetivo:** confirmar que a API está respondendo.
 - **Requisição:** `GET http://localhost:8080/status`
 - **Resposta — 200 OK:**
-- **Print:**![alt text](imagem/image.png)
+- **Print:**
+	![alt text](imagem/image.png)
 ```json
 {
 	"status": "ok"
@@ -73,7 +72,8 @@ Todos os exemplos abaixo usam `http://localhost:8080` como endereço-base. As re
 - **Objetivo:** retornar todas as missões. Opcionalmente, filtra pelo nome usando o parâmetro `nome` (busca parcial, sem diferenciar maiúsculas de minúsculas).
 - **Requisição:** `GET http://localhost:8080/missoes`
 - **Resposta — 200 OK:**
-- **Print:**![alt text](imagem/image2.png)
+- **Print:**
+    ![alt text](imagem/image2.png)
 ```json
 [
 	{
@@ -109,7 +109,8 @@ Exemplo de filtro: `GET http://localhost:8080/missoes?nome=mars`.
 - **Objetivo:** retornar uma missão específica.
 - **Requisição:** `GET http://localhost:8080/missoes/1`
 - **Resposta — 200 OK:**
-- **Print:** ![alt text](imagem/image3.png)
+- **Print:** 
+	![alt text](imagem/image3.png)
 ```json
 {
 	"id": 1,
@@ -127,7 +128,8 @@ Se o ID não existir, a API retorna **404 Not Found**:
 	"erro": "Missão não encontrada"
 }
 ```
-- **Print:** ![alt text](image4.png)
+- **Print:** 
+    ![alt text](image4.png)
 ### Criar missão
 
 - **Método:** `POST`
@@ -135,7 +137,8 @@ Se o ID não existir, a API retorna **404 Not Found**:
 - **Objetivo:** Criar uma missão informando seu nome.
 - **Requisição:** `POST http://localhost:8080/missoes`
 - **Corpo JSON:**
-- **Print:** ![alt text](image5.png)
+- **Print:** 
+	![alt text](image5.png)
 
 ```json
 {
@@ -159,7 +162,8 @@ Se o ID não existir, a API retorna **404 Not Found**:
 - **Objetivo:** Alterar o nome da missão indicada pelo ID.
 - **Requisição:** `PUT http://localhost:8080/missoes/1`
 - **Corpo JSON:**
-- **Print:** ![alt text](imagem/image6.png)
+- **Print:** 
+	![alt text](imagem/image6.png)
 
 ```json
 {
@@ -188,7 +192,8 @@ Para um ID inexistente, retorna **404 Not Found** com `{"erro":"Missão não enc
 - **Objetivo:** Remover a missão indicada pelo ID.
 - **Requisição:** `DELETE http://localhost:8080/missoes/1`
 - **Resposta — 200 OK:**
-- **Print:** ![alt text](imagem/image7.png)
+- **Print:** 
+	![alt text](imagem/image7.png)
 ```json
 {
 	"mensagem": "Missão removida com sucesso"
